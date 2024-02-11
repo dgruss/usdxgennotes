@@ -26,6 +26,15 @@ def read_and_syllabify(file_path):
         processed_lines.append(processed_words)
     return processed_lines
 
+# Load the frequency data from the 'frequency.txt' file
+frequency_data = []
+with open(frequency_file_path, 'r') as file:
+    for line in file:
+         parts = line.strip().split('\t')
+         if len(parts) == 3:
+             time, frequency, length = parts
+             frequency_data.append((float(time), float(frequency), float(length)))
+
 # Update the data with the adjusted positions
 updated_data = []
 for time, frequency, length in frequency_data:
