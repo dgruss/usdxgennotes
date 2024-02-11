@@ -101,16 +101,15 @@ for i in range(len(merged_data)):
     time, length, note = merged_data[i]
     if length > 1:
         length -= 1
-    if lyrics_file == None:
-        syllable = "-"
-    elif k < len(syllabified_lyrics[j]):
+    syllable = "~"
+    if j < len(syllabified_lyrics) and k < len(syllabified_lyrics[j]):
         syllable = syllabified_lyrics[j][k]
         k += 1
     print(f": {time} {length} {note} {syllable}")
     # Check if this is not the last note and then if the gap to the next note is more than 15
     if i < len(merged_data) - 1:
         next_time = merged_data[i + 1][0]
-        if time + length + 15 <= next_time:
+        if time + length + 15 <= next_time or (time + length + 10 <= next_time and j < len(syllabified_lyrics) and k >= len(syllabified_lyrics[j])):
             # Print the additional line
             print(f"- {time}")
             j += 1
