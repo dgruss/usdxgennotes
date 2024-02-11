@@ -18,6 +18,13 @@ This project aims to automate the creation of songs for UltraStar Deluxe (USDX),
 The project aspires to fully automate the USDX song creation process, including downloading resources and fine-tuning song files for immediate use in UltraStar Deluxe.
 For most people this approach should be faster than alternatives to song text file creation.
 
+## Development TODOs
+[ ] Integrate with a Youtube Downloader Script
+[ ] Script the call to vocalremover.org (or replace it with a local solution)
+[ ] Automate Lyrics fetching
+[ ] Better Tony integration (e.g. without GUI just input -> output )
+[ ] Detect when lyrics and notes don't match -> show warning and fix without using Ultrastar
+
 ## Usage
 ```
 # Generate a USDX song text file
