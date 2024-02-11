@@ -20,9 +20,11 @@ def process_line(line):
         words = [words[0]] + [' ' + word for word in words[1:]]
         total_syllables = sum([len(dic.inserted(word).split('-')) for word in words])
         syllable_length = length / max(1, total_syllables)
-        
         for word in words:
             split_syllables = dic.inserted(word).split('-')
+            if word[0] == ' ':
+                split_syllables = dic.inserted(word[1:]).split('-')
+                split_syllables[0] = ' ' + split_syllables[0]
             for syllable in split_syllables:
                 syllables_with_space.append(syllable)
                 syllable_lengths.append(syllable_length)
