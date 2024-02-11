@@ -12,7 +12,7 @@ This project aims to automate the creation of songs for UltraStar Deluxe (USDX),
 7. **Load Song in Ultrastar**: Check whether the line breaks match, if not, fix the lyrics text file and regenerate, if necessary, merge lines, or add empty lines, that's less work than fixing all the text in the editor
 8. **Fix the Lyrics in Ultrastar**: Make sure the lyrics are on time, this part is the largest amount of manual work left (around 10-20 minutes). If there's only a single note with multiple words or syllables that are not split up - no worries, just make sure things are in the right place.
 9. **Fix Syllable Breaks**: Use `splitnotes.py` to split up notes that contain multiple syllables or words
-10. **Manual Adjustments**: Open the generated file in UltraStar to fix notes, timings, and lyrics as necessary (it will be necessary!).
+10. **Manual Adjustments**: Open the generated file in UltraStar and check/fix all remaining issues with notes, timings, and lyrics
 
 ## Future Vision
 The project aspires to fully automate the USDX song creation process, including downloading resources and fine-tuning song files for immediate use in UltraStar Deluxe.
